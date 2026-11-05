@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Limen. Видно, был ли холод.</title>
+<meta name="description" content="Наклейка на упаковку готовой еды. Если упаковка была теплее +6 °C дольше 30 минут, окошко становится красным и уже не белеет.">
+<meta name="theme-color" content="#12332B">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Limen">
+<meta property="og:title" content="Limen. Видно, был ли холод.">
+<meta property="og:description" content="Наклейка на упаковку готовой еды. Если упаковка была теплее +6 °C дольше 30 минут, окошко становится красным и уже не белеет.">
+<meta property="og:url" content="https://sashashpak2009-ship-it.github.io/limen/">
+<meta property="og:image" content="https://sashashpak2009-ship-it.github.io/limen/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Логотип Limen и две метки рядом: белое окошко с подписью «Холод соблюдён» и красное с подписью «Был перегрев».">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/FTX45ACh.otf" as="font" type="font/otf" crossorigin>
+<link rel="preload" href="fonts/FTX85ACh.otf" as="font" type="font/otf" crossorigin>
+<script>
+(function (d) {
+  try {
+    if (!sessionStorage.getItem('limen-intro') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      d.classList.add('intro-on');
+      setTimeout(function () { if (!window.LimenIntroStarted) d.classList.remove('intro-on'); }, 5000);
+    }
+  } catch (e) {}
+})(document.documentElement);
+</script>
+<link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/film.css">
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/CustomEase.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/DrawSVGPlugin.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/MorphSVGPlugin.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script defer src="js/logo.js"></script>
+<script defer src="js/film.js"></script>
+<script defer src="js/cutaway.js"></script>
+<script defer src="js/form.js"></script>
+<script defer src="js/site.js"></script>
+</head>
+<body>
+
+<div class="intro" id="intro" aria-hidden="true"><svg class="intro__logo" viewBox="0 0 569 169"></svg></div>
+
+<header class="top">
+  <a class="top__logo" href="#top" aria-label="Limen">
+    <svg viewBox="0 0 569 169" aria-hidden="true"><g class="lg-letters" fill="none" stroke="currentColor" stroke-width="21.6"><path class="lg-p" d="M10.800 8V125A32.700 32.700 0 0 0 43.500 157.700"/><path class="lg-p" d="M74 52V167.500"/><path class="lg-p" d="M120.800 167.500V101.500A41.500 41.500 0 0 1 203.800 101.500V167.500"/><path class="lg-p" d="M203.800 101.500A41.100 41.100 0 0 1 286 101.500V167.500"/><path class="lg-p" d="M324.500 108.750H433.250"/><path class="lg-p" d="M422.500 108.750A49 49 0 1 0 407.100 144.450"/><path class="lg-p" d="M459.800 167.500V109.750A49.250 49.250 0 0 1 558.300 109.750V167.500"/></g><circle class="lg-dot" cx="74.500" cy="19" r="17" fill="#66D40B"/></svg>
+  </a>
+  <nav class="top__nav" aria-label="Разделы">
+    <a href="#how">Как работает</a>
+    <a href="#price">Цена</a>
+    <a href="#pilot">Пилот</a>
+    <a href="#faq">Вопросы</a>
+  </nav>
+  <a class="btn btn--pilot top__cta" href="#pilot">Бесплатный пилот</a>
+</header>
+
+<main id="top">
+
+  <section class="hero t-deep" aria-labelledby="hero-title">
+    <video class="hero__video" muted loop playsinline preload="none" data-hd="video/hero-hd.mp4" data-sd="video/hero-sd.mp4" aria-hidden="true" tabindex="-1"></video>
+    <div class="hero__shade"></div>
+    <div class="hero__in">
+      <h1 class="hero__title" id="hero-title"><span class="ln"><span>Видно, был</span></span> <span class="ln"><span>ли холод.</span></span></h1>
+      <div class="hero__row">
+        <div class="hero__text">
+          <p class="lead">Наклейка на упаковку готовой еды. Если упаковка была теплее +6&nbsp;°C дольше 30&nbsp;минут, окошко становится красным и уже не белеет.</p>
+          <p class="hero__price">10&nbsp;<span class="rub"><span class="rub__t">₽</span></span> за штуку</p>
+          <div class="hero__btns">
+            <a class="btn btn--pilot" href="#pilot">Бесплатный пилот</a>
+            <a class="btn btn--plain" href="#how">Как работает</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a class="hero__cue" href="#s1sec" aria-label="Проблема"><span></span></a>
+  </section>
+
+  <section class="sec t-cream" id="s1sec" aria-labelledby="s1">
+    <p class="sec__n">01</p>
+    <h2 class="sec__t" id="s1">Проблема</h2>
+    <div class="sec__b split">
+      <div class="split__a">
+        <p class="lead lead--big rv">Магазин вернул партию: „нарушен температурный режим“. Где — в машине, на складе, на приёмке — никто не знает. Платит производитель.</p>
+        <p class="figure rv"><span class="figure__num"><span data-count="2200">2&nbsp;200</span>&nbsp;<span class="rub"><span class="rub__t">₽</span></span></span> <span class="figure__cap">один возвращённый ящик сэндвичей</span></p>
+      </div>
+      <div class="tile tile--tall split__b"><video muted loop playsinline preload="none" data-hd="video/boxes-hd.mp4" data-sd="video/boxes-sd.mp4" aria-hidden="true" tabindex="-1"></video></div>
+    </div>
+  </section>
+
+  <section class="sec t-deep" id="how" aria-labelledby="s2">
+    <p class="sec__n">02</p>
+    <h2 class="sec__t" id="s2">Как работает</h2>
+    <div class="sec__b">
+      <div id="film" class="film" data-palette="fresh">
+        <ol class="steps">
+          <li>Активировали в холодном цехе</li>
+          <li>В дороге — холодно</li>
+          <li>Дверь открыта 35 минут — теплее +6&nbsp;°C</li>
+          <li>Вернули в холод — красное осталось</li>
+          <li>Холод соблюдён. Был перегрев.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec t-sage cut-sec" id="inside" aria-labelledby="s3">
+    <p class="sec__n">03</p>
+    <h2 class="sec__t" id="s3">Что внутри</h2>
+    <div class="sec__b cut-grid">
+      <p class="lead cut-text"><span class="s is-on">Внутри капля вещества, которое тает при +6&nbsp;°C.</span> <span class="s">Растаяв, она пропитывает белую бумагу, и проступает красный слой.</span> <span class="s">Как масляное пятно: обратно не высохнет.</span></p>
+      <div class="cut" id="cut"></div>
+    </div>
+  </section>
+
+
+  <section class="sec t-forest price-sec" id="price" aria-labelledby="s4">
+    <p class="sec__n">04</p>
+    <h2 class="sec__t" id="s4">Цена</h2>
+    <div class="sec__b">
+      <ul class="econ">
+        <li><span class="econ__num"><span data-count="10">10</span>&nbsp;<span class="rub"><span class="rub__t">₽</span></span></span><span class="econ__cap">одна метка</span></li>
+        <li><span class="econ__num"><span data-count="2200">2&nbsp;200</span>&nbsp;<span class="rub"><span class="rub__t">₽</span></span></span><span class="econ__cap">один возвращённый ящик</span></li>
+        <li><span class="econ__num"><span data-count="220">220</span></span><span class="econ__cap">меток окупает один спасённый ящик</span></li>
+      </ul>
+      <p class="lead econ__note rv">Продаём рулонами по 500 штук — 5&nbsp;000&nbsp;<span class="rub"><span class="rub__t">₽</span></span>. Метка клеится вручную, оборудование не нужно.</p>
+    </div>
+    <div class="tape" aria-hidden="true"><div class="tape__track"></div></div>
+  </section>
+
+  <section class="sec t-cream" aria-labelledby="s5">
+    <p class="sec__n">05</p>
+    <h2 class="sec__t" id="s5">Для кого</h2>
+    <div class="sec__b">
+      <p class="words">Для небольших производителей <span class="kw">салатов,</span> <span class="kw">сэндвичей</span> и <span class="kw">обедов,</span> которые возят продукцию в магазины.</p>
+      <div class="trio">
+        <div class="tile"><video muted loop playsinline preload="none" data-hd="video/salad-hd.mp4" data-sd="video/salad-sd.mp4" aria-hidden="true" tabindex="-1"></video></div>
+        <div class="tile"><video muted loop playsinline preload="none" data-hd="video/lunch-hd.mp4" data-sd="video/lunch-sd.mp4" aria-hidden="true" tabindex="-1"></video></div>
+        <div class="tile"><video muted loop playsinline preload="none" data-hd="video/pack-hd.mp4" data-sd="video/pack-sd.mp4" aria-hidden="true" tabindex="-1"></video></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec t-lime" id="pilot" aria-labelledby="s6">
+    <p class="sec__n">06</p>
+    <h2 class="sec__t" id="s6">Бесплатный пилот</h2>
+    <div class="sec__b split">
+      <p class="lead split__a rv">Бесплатно на одну партию. Вы клеите метки, мы вместе с вами и вашим магазином смотрим результат.</p>
+      <form class="form split__c2 rv" id="pilot-form" action="mailto:limen.perm@gmail.com" method="post" enctype="text/plain">
+        <div class="field"><label for="f-name">Имя</label><input id="f-name" name="Имя" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="f-company">Компания</label><input id="f-company" name="Компания" type="text" autocomplete="organization" required></div>
+        <div class="field"><label for="f-contact">Телефон или Telegram</label><input id="f-contact" name="Телефон или Telegram" type="text" required></div>
+        <div class="field"><label for="f-packs">Сколько упаковок в день</label><input id="f-packs" name="Сколько упаковок в день" type="text" inputmode="numeric" required></div>
+        <div class="check">
+          <input id="f-agree" type="checkbox" required>
+          <label for="f-agree">Согласен на обработку <a href="privacy.html">персональных данных</a></label>
+        </div>
+        <div class="form__send">
+          <button class="btn btn--pilot" type="submit">Бесплатный пилот</button>
+          <a class="form__alt" href="https://t.me/pomidorka_1">или напишите в Telegram</a>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="sec t-paper" id="faq" aria-labelledby="s7">
+    <p class="sec__n">07</p>
+    <h2 class="sec__t" id="s7">Вопросы</h2>
+    <div class="sec__b faq">
+      <details open><summary>Почему +6&nbsp;°C?</summary><div class="faq__a"><p>Это верхняя граница хранения готовой еды: +4&nbsp;±&nbsp;2&nbsp;°C.</p></div></details>
+      <details><summary>Можно ли обмануть метку?</summary><div class="faq__a"><p>Нет. Сработавшая метка не белеет, а при попытке отклеить рвётся.</p></div></details>
+      <details><summary>Что если рулон лежал в тепле?</summary><div class="faq__a"><p>Перед работой рулон держат в холодильнике. Если активировать тёплую метку, она сразу покраснеет — ошибка видна до отправки.</p></div></details>
+      <details><summary>Чем это лучше логгера?</summary><div class="faq__a"><p>Логгер один на машину и видит кузов. Метка стоит на каждой упаковке, и магазину не нужен прибор, чтобы её прочитать.</p></div></details>
+      <details><summary>Это уже можно купить?</summary><div class="faq__a"><p>Пока нет. Есть рабочий прототип, состав на +6&nbsp;°C делаем вместе с химиком-технологом. Первые пилоты — в 2027 году.</p></div></details>
+    </div>
+  </section>
+
+  <section class="sec t-deep team-sec" aria-labelledby="s8">
+    <p class="sec__n">08</p>
+    <h2 class="sec__t" id="s8">Команда</h2>
+    <div class="sec__b">
+      <p class="team rv">Александр и Максим. Пермь.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot t-deep">
+  <div class="foot__logo" id="footLogo"><svg viewBox="0 -60 569 229" role="img" aria-label="Limen"><g class="lg-letters" fill="none" stroke="currentColor" stroke-width="21.6"><path class="lg-p" d="M10.800 8V125A32.700 32.700 0 0 0 43.500 157.700"/><path class="lg-p" d="M74 52V167.500"/><path class="lg-p" d="M120.800 167.500V101.500A41.500 41.500 0 0 1 203.800 101.500V167.500"/><path class="lg-p" d="M203.800 101.500A41.100 41.100 0 0 1 286 101.500V167.500"/><path class="lg-p" d="M324.500 108.750H433.250"/><path class="lg-p" d="M422.500 108.750A49 49 0 1 0 407.100 144.450"/><path class="lg-p" d="M459.800 167.500V109.750A49.250 49.250 0 0 1 558.300 109.750V167.500"/></g><circle class="lg-dot" cx="74.500" cy="19" r="17" fill="#66D40B"/></svg></div>
+  <div class="foot__row">
+    <a href="mailto:limen.perm@gmail.com">limen.perm@gmail.com</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://t.me/pomidorka_1">Telegram @pomidorka_1</a>
+    <span aria-hidden="true">·</span>
+    <span>© 2026 Limen</span>
+  </div>
+</footer>
+
+</body>
+</html>
